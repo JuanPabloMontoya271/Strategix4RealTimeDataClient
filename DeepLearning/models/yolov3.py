@@ -13,7 +13,7 @@ tf.disable_v2_behavior()
 class InferenceEngine:
     
     classes =  {'0':'person','1':'bicycle','2':'car','3':'bike','5':'bus','7':'truck'}
-    def __init__(self, camara_feed = 0):
+    def __init__(self, camera_feed = 0):
         self.classes = {'0':'person','1':'bicycle','2':'car','3':'bike','5':'bus','7':'truck'}
         self.camera_feed = camera_feed
     def load(self):

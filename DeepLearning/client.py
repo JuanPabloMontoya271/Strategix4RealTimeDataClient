@@ -32,7 +32,11 @@ async def start_server():
     await sio.connect('http://localhost:3000')
     await sio.wait()  
 if __name__ == '__main__':
-    engine = yolo.InferenceEngine("rtsp://admin:admin0000@192.168.1.7:554/cam/realmonitor?channel=2&subtype=1")
+    engine = yolo.InferenceEngine()
     inputs, model, sess, cap , error= engine.load()
     if not error:
         loop.run_until_complete(start_server())
+
+
+#Notes
+#rtsp url: "rtsp://admin:admin0000@192.168.1.7:554/cam/realmonitor?channel=2&subtype=1"
